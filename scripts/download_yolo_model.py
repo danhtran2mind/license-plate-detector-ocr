@@ -7,7 +7,7 @@ parser = argparse.ArgumentParser(description="Download model files using wget.")
 parser.add_argument('--url', type=str,
                     default='https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo12n.pt',
                     help='URL of the model to download')
-parser.add_argument('--output-dir', type=str, default='./ckpts/raw',
+parser.add_argument('--output-dir', type=str, default='./ckpts/yolo/raw',
                     help='Output directory for downloaded models')
 
 # Parse arguments

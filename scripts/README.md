@@ -21,7 +21,7 @@ python scripts/download_yolo_model.py \
     --output-dir <saved_yolo_model_path>
 ```
 
-This will save the pre-trained weights to the ./ckpts/raw/ directory.
+This will save the pre-trained weights to the ./ckpts/yolo/raw/ directory.
 
 ## 2 Process Dataset
 Here is the CLI command to download and process datasets.
@@ -69,7 +69,7 @@ python scripts/train_yolo.py\
     --epochs 100 \
     --batch 32 \
     --device 0 \
-    --project "./ckpts/finetune/runs" \
+    --project "./ckpts/yolo/finetune/runs" \
     --name "license_plate_detector"
 ```
 
@@ -103,7 +103,7 @@ yolo detect train \
 For reference, the equivalent configuration using the yolo CLI command is shown below:
 ```bash
 yolo detect train \
-    model="./ckpts/raw/yolo12n.pt" \
+    model="./ckpts/yolo/raw/yolo12n.pt" \
     data="./datasets/yolo_standard_dataset/data.yaml" \
     epochs=100 \
     batch=32 \
@@ -112,7 +112,7 @@ yolo detect train \
     lr0=0.01 \
     lrf=0.001 \
     device=0 \
-    project="./ckpts/finetune/runs" \
+    project="./ckpts/yolo/finetune/runs" \
     name="license_plate_detector" \
     save=true \
     resume=false

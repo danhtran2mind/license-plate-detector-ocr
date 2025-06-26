@@ -124,3 +124,6 @@ yolo --help
 ```
 
 ## Using PaddleOCR
+```bash
+./ckpts/paddleocr
+```
